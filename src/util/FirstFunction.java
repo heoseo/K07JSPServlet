@@ -20,4 +20,14 @@ public class FirstFunction {
 		}
 		catch(IOException e){}
 	}
+	
+	public void tempFunc(JspWriter out) {
+		String str = "나는 문자열";
+		try {
+			out.println(str);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
