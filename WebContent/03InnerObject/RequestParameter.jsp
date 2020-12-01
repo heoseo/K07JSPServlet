@@ -16,9 +16,10 @@
 // 한글 깨짐 방지
 request.setCharacterEncoding("UTF-8");
 
-/* 전송방식에 상관없이 getParameter()로 폼값을 받을 수 있다.
-만약 값이 입력되지 않았다면 길이기 0인 String객체를 반환하고
-파라미터명이 틀린 경우에는 null을 반환한다.*/
+/*	* getParameter(String name)
+		: 전송방식에 상관없이 getParameter()로 폼값을 받을 수 있다.
+		: 만약 값이 입력되지 않았다면 길이기 0인 String객체를 반환하고
+			파라미터명이 틀린 경우에는 null을 반환한다.*/
 String id = request.getParameter("id");
 
 String name = request.getParameter("name");
@@ -45,13 +46,15 @@ else{
 
 
 
-/* radio는 항목은 여러개이나, 선택가능한 항목이 1개이기 때문에
-	getParameter()를 통해 폼값을 받을 수 있다. */
+/* 	* radio
+		: 항목은 여러개이나, 선택가능한 항목이 1개이기 때문에
+		getParameter()를 통해 폼값을 받을 수 있다. */
 String sexStr = request.getParameter("sex");
 
-/* checkbox는 여러개 항목에 대해 선택이 가능하므로 getParameterValues()를 사용한다.
-	항목 중 체크된 것만 서버로 전송되고, 파라미터명이 틀리거나 값이 전송되지 않으면
-	null을 반환한다. */
+/* 	* checkbox
+		: 여러개 항목에 대해 선택이 가능하므로 getParameterValues()를 사용한다.
+		항목 중 체크된 것만 서버로 전송되고, 파라미터명이 틀리거나 값이 전송되지 않으면 null을 반환한다. 
+		: 단, 항목이 하나면 배열말고 String으로 getParmemter()를 통해 받을 수 있음.*/
 String[] favo = request.getParameterValues("favorite");
 String favStr = "";
 

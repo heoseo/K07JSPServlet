@@ -17,29 +17,31 @@
 	
 	<!-- 
 	Get방식에는 3가지 전송방식이 있다.
-	1. <a gref=''를 사용하는 방법
+	1. <a href=''를 사용하는 방법
 	2. JS의 location.href=''를 사용하는 방법
 	3. <form method='get' 을 사용하는 방법 -->
-	<h3>Get방식 전송</h3>
+	<h3>* Get방식 전송</h3>
 	<a href="RequestInfo.jsp?paarmNum=123&paramEng=Hello&parapHan=안녕">
 		Get방식</a>
 		
 		
-	<h3>Post방식 전송</h3>
-	<form action="RequestInfo.jsp" method="post">
+	<br/><br/><br/>
+	<h3>* Post방식 전송</h3>
+	<form action="RequestInfo.jsp" method="post">	
 		문자열입력 : <input type="text" name="paramHan" />
 		<input type="submit" value="Post방식" />
 	</form>
+	<!-- method="get" 로 할경우 => 주소창에는 : RequestInfo.jsp?paramHan=d -->
 	
 	
-	
-	<h2>파라미터 및 값 전달</h2>
+	<br/><br/>
+	<h2>* 파라미터 및 값 전달</h2>
 	<%
 	// 한글을 전송하는 경우 서버 환경에 따라 깨질 수 있으므로 인코딩 후 전달하는 것이 안전하다.
 	String encodeName = URLEncoder.encode("홍길동", "UTF-8");
 	%>
 	<a href="RequestParameter.jsp?name=<%=encodeName%>
-		&id=nong&sex=man&favorite=&self_intro=">Get방식</a>
+		&id=hong&sex=man&favorite=&self_intro=">(1) Get방식</a>
 	<br /><br />
 	
 	<script>
@@ -77,7 +79,7 @@
  			필요없는 공백이 포함될 수 있으므로 주의해야 한다.  
  			<br/> 을 써도 그대로 출력됨.-->
 	 		<br />
-	 		<input type="submit" value="POST방식" />
+	 		<input type="submit" value="(2) POST방식" />
 	 		
 		
 		

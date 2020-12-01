@@ -39,13 +39,14 @@ if(font == null || color.length() == 0) font = "verdana";
 <body>
 
 	<h2>Request객체와 Scripting Element 응용하기</h2>
-	<h3>HTML안에서 스크립팅 요소 사용하기</h3>
-	<!-- form문을 통해 hn태그를 6번 반복해서 출력한다. -->
+	<h3>* HTML안에서 스크립팅 요소 사용하기</h3>
+	<!-- form문을 통해 h태그를 6번 반복해서 출력한다. -->
 	<% for(int i = 1; i <= 6; i++){ %>
 		<h<%=i %>>제목<%=i %>입니다.</h<%=i %>>
 	<% } %>
 	
-	<h3>숫자를 입력 후 버튼을 눌러주세요</h3>
+	<br/><br/><br/><br/>
+	<h3>* 숫자를 입력 후 버튼을 눌러주세요</h3>
 	<form>		
 		<!-- action값이 없으면 현재페이지로 전송.
 			method값이 없으면 get방식으로 전송
@@ -67,7 +68,10 @@ if(font == null || color.length() == 0) font = "verdana";
 		}
 		%>
 		
-	<h2>CSS안에서 스크립팅 용소 사용하기</h2>
+		
+		
+	<br/><br/><br/><br/>
+	<h2>* CSS안에서 스크립팅 요소 사용하기</h2>
 	<span>CSS를 적용한 텍스트</span>
 	<form method="post">
 		[글자색]
@@ -76,7 +80,7 @@ if(font == null || color.length() == 0) font = "verdana";
 			<option value="blue">파란색</option>
 			<option value="green">녹색</option>
 		</select>
-		[글꼴]
+		&nbsp;&nbsp;&nbsp;&nbsp;[글꼴]
 		<select name="font">
 			<option value="굴림체">굴림체</option>
 			<option value="바탕체">바탕체</option>

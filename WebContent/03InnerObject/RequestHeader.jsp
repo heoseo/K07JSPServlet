@@ -39,10 +39,11 @@
 		String headerName = (String)headers.nextElement();
 		/* getHeader(헤더명) : 요청헤더값을 얻어올 때 사용하는 함수.*/
 		String headerValue = request.getHeader(headerName);
-		out.println(String.format("헤덩명:%s, 헤더값:%s<br/>",headerName, headerValue));
+		out.println(String.format("헤더명:%s, 헤더값:%s<br/>",headerName, headerValue));
 	}
 %>
 
+	<br/><br/><br/><br/>
 	<h2>요청헤더명으로 브라우저 종류 알아내기</h2>
 <%
 	String webBrowser = request.getHeader("user-agent");
